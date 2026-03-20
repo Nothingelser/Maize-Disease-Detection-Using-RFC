@@ -4,7 +4,7 @@
 #
 # HOW TO RUN:
 #   1. pip install numpy pandas scikit-learn matplotlib seaborn pillow opencv-python
-#   2. Download PlantVillage dataset: https://www.kaggle.com/datasets/emmarex/plantdisease
+#   2. Download PlantVillage dataset: https://www.kaggle.com/datasets/smaranjitghose/corn-or-maize-leaf-disease-dataset
 #      Extract so maize class folders are inside dataset/data/, e.g.:
 #        dataset/data/Corn_(maize)___healthy/
 #        dataset/data/Corn_(maize)___Northern_Leaf_Blight/
@@ -65,9 +65,9 @@ def extract_features(img_array: np.ndarray) -> np.ndarray:
     Extract a feature vector from a (H, W, 3) uint8 image array.
 
     Features (section 2.3):
-      • Colour histogram per channel (R, G, B) — 32 bins each = 96 features
-      • Flattened resized pixel values normalised to [0, 1]
-      • Mean and std of each channel — 6 features
+    • Colour histogram per channel (R, G, B) — 32 bins each = 96 features
+    • Flattened resized pixel values normalised to [0, 1]
+    • Mean and std of each channel — 6 features
 
     Total = 96 + (64*64*3) + 6 = 12,390 features per image
     """
